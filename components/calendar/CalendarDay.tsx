@@ -67,7 +67,8 @@ export const CalendarDay: React.FC<CalendarDayProps> = ({
   };
 
   const isToday = () => {
-    const today = new Date();
+    // Use June 16, 2025 as the fixed date
+    const today = new Date(2025, 5, 16); // Month is 0-indexed, so 5 = June
     return day === today.getDate();
   };
 

@@ -24,7 +24,8 @@ interface CalendarGridProps {
 }
 
 export const CalendarGrid: React.FC<CalendarGridProps> = ({ data, activityTypes, mockActiveDates }) => {
-  const currentDate = new Date();
+  // Use June 16, 2025 as the current date
+  const currentDate = new Date(2025, 5, 16); // Month is 0-indexed, so 5 = June
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
   
